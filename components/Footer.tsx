@@ -47,7 +47,7 @@ export default function Footer() {
             <p className="text-gray-500 text-xs leading-relaxed">
               Building digital experiences that are smooth, scalable, and made to impress. Based in Indonesia.
             </p>
-            <div className="flex gap-3 mt-4">
+            {/* <div className="flex gap-3 mt-4">
               {socialIcons.map((s, i) => (
                 <a
                   key={i}
@@ -57,7 +57,7 @@ export default function Footer() {
                   {s.icon}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Links */}
@@ -93,10 +93,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-gray-600 text-xs">© 2025 Fangki Portfolio. All rights reserved.</p>
-          <p className="text-gray-600 text-xs">
-            Made with <span className="text-amber-400">♥</span> in Indonesia
-          </p>
+          <p className="text-gray-600 text-xs">© {new Date().getFullYear()} Fangki Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>

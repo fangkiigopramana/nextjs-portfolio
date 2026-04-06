@@ -18,70 +18,37 @@ type Portfolio = {
 const allPortfolios: Portfolio[] = [
   {
     title: 'Company Profile',
-    company: 'Unicorn Indonesia',
+    company: 'Unicon Indonesia',
     desc: 'Corporate profile site with dynamic service sections, career pages, and admin panel.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+    image: '/images/portfolio/compro-uniconindonesia.webp',
     tag: 'Landing Page',
     tagColor: 'bg-amber-400 text-black',
     detail: 'A full-featured company profile built with Laravel & Blade. Includes dynamic service pages, career listings managed via Filament admin panel, and SEO-optimized pages.',
-    tech: ['Laravel', 'Blade', 'Filament', 'Tailwind CSS'],
-    link: '#',
+    tech: ['Odoo', 'PHP', 'jQuery', 'Nginx', 'Google Maps'],
+    link: 'https://www.uniconindonesia.com/home',
   },
   {
     title: 'HRIS Software',
     company: 'PT. Bakti Transindo',
     desc: 'HR system to manage employee data, payroll, and attendance efficiently.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
+    image: '/images/portfolio/hris-bakti.webp',
     tag: 'Web App',
     tagColor: 'bg-blue-500 text-white',
     detail: 'A comprehensive HRIS platform handling employee records, payroll computation, attendance tracking, and leave management with role-based access control.',
-    tech: ['Laravel', 'Livewire', 'PostgreSQL', 'Tailwind CSS'],
+    tech: ['Laravel', 'SQL Server', 'Bootstrap CSS'],
     link: '#',
   },
   {
-    title: 'Company Profile Ekspormaja',
-    company: 'Ekspormaja',
+    title: 'Company Profile Eksporinaja',
+    company: 'Eksporinaja',
     desc: 'WordPress-based profile site with advanced catalog features and business contact integration.',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80',
+    image: '/images/portfolio/eksporinaja.webp',
     tag: 'Landing Page',
     tagColor: 'bg-amber-400 text-black',
     detail: 'A polished WordPress company profile with a custom product catalog, WhatsApp business integration, and a contact form connected to email notifications.',
     tech: ['WordPress', 'Elementor', 'PHP', 'MySQL'],
     link: '#',
-  },
-  {
-    title: 'Hospital Management System',
-    company: 'SIMRS Project',
-    desc: 'Full-featured hospital system with queue management, patient records, and billing.',
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80',
-    tag: 'Web App',
-    tagColor: 'bg-green-500 text-white',
-    detail: 'A Next.js App Router hospital system with modules for queue management (text-to-speech), patient record management, clinic scheduling, and role-based user access.',
-    tech: ['Next.js', 'Prisma', 'PostgreSQL', 'NextAuth', 'Tailwind CSS'],
-    link: '#',
-  },
-  {
-    title: 'Network Monitor Tool',
-    company: 'Internal Tool',
-    desc: 'Browser-based real-time network monitoring dashboard with alert notifications.',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80',
-    tag: 'Tool',
-    tagColor: 'bg-purple-500 text-white',
-    detail: 'A standalone HTML/JS dashboard that monitors network device statuses in real-time using ping checks, with visual alerts and localStorage-based configuration.',
-    tech: ['HTML', 'JavaScript', 'Tailwind CSS', 'localStorage'],
-    link: '#',
-  },
-  {
-    title: 'PromptVault',
-    company: 'Personal Project',
-    desc: 'A curated prompt gallery app with category filtering and local persistence.',
-    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80',
-    tag: 'Tool',
-    tagColor: 'bg-purple-500 text-white',
-    detail: 'A browser-based prompt management app seeded from a JSON file on first load. Supports categorization, search, copy-to-clipboard, and full CRUD via localStorage.',
-    tech: ['HTML', 'JavaScript', 'Tailwind CSS', 'localStorage'],
-    link: '#',
-  },
+  }
 ]
 
 const INITIAL_COUNT = 3
@@ -130,17 +97,8 @@ export default function Portfolio() {
                 <span className={`text-xs mb-3 bg-white/5 border border-white/10 text-gray-300 px-3 py-1 ${p.tagColor} rounded-md font-bold`}>
                   {p.tag}
                 </span>
-                <h3 className="font-bold text-sm mt-3 mb-1">{p.title}</h3>
+                <h3 className="font-bold text-sm mt-3 mb-1">{p.company}</h3>
                 <p className="text-gray-400 text-xs leading-relaxed">{p.desc}</p>
-                <button
-                  onClick={() => setSelected(p)}
-                  className="inline-flex items-center gap-1 text-amber-400 text-xs font-medium mt-4 hover:gap-2 transition-all"
-                >
-                  View More
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </button>
               </div>
             </div>
           ))}
@@ -188,11 +146,10 @@ export default function Portfolio() {
 
             {/* Content */}
             <div className="p-6">
-              <div className="text-xs text-gray-500 mb-1">{selected.company}</div>
               <span className={`text-xs bg-white/5 border border-white/10 text-gray-300 px-3 py-1 rounded-lg ${selected.tagColor} mt-3`}>
                 {selected.tag}
               </span>
-              <h3 className="text-xl font-extrabold">{selected.title}</h3>
+              <h3 className="text-xl font-extrabold">{selected.company}</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-5">{selected.detail}</p>
 
               {/* Tech stack */}

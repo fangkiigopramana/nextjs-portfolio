@@ -41,9 +41,9 @@ export default function Hero() {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-3 gap-4 max-w-sm mx-auto">
           {[
-            { value: '3+', label: 'Years Exp' },
-            { value: '20+', label: 'Projects' },
-            { value: '10+', label: 'Clients' },
+            { value: '2+', label: 'Years Exp' },
+            { value: '5+', label: 'Projects' },
+            { value: '4+', label: 'Clients' },
           ].map((stat, i) => (
             <div key={stat.label} className={`text-center${i === 1 ? ' border-x border-white/8' : ''}`}>
               <div className="text-2xl font-extrabold text-amber-400" style={{ fontFamily: "'Syne', sans-serif" }}>
